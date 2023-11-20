@@ -1,0 +1,37 @@
+buildscript { //定义脚本使用资源
+    repositories {
+        maven {url 'https://maven.aliyun.com/repository/public'}
+    }
+    dependencies {
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:3.1.2'
+    }
+}
+plugins {
+    id 'java'
+}
+apply plugin: 'java'
+apply plugin:'org.springframework.boot'//引入插件
+apply plugin:'io.spring.dependency-management'//引入插件
+group 'com.jay'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+bootJar {
+    //根据开发者的需要，可以自定义一些打包后的配置项，如：后缀，版本号，执行类
+    archiveClassifier = 'jayj';//打包文件加一个后缀
+    archiveBaseName = 'springboot-xia';//设置打包文件的名称
+    archiveVersion=project_version;
+    //mainClassName='com.maker.StartSpringBoot'//程序启动类，可省略
+
+}
+test {
+    useJUnitPlatform()
+}

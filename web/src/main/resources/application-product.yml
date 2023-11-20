@@ -1,0 +1,3 @@
+#application-product
+server:
+  port: 8282

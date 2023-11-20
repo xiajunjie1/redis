@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: dev # 默认的profile文件名称
+  server:
+    port: 8080
+
+
+logging:
+  level:
+    root: info #全局日志级别
+    com.maker: debug #局部日志级别
+

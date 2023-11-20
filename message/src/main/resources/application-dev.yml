@@ -1,0 +1,4 @@
+server:
+  port: 8181
+message:
+  version: 1.0

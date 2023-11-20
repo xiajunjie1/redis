@@ -1,0 +1,11 @@
+rootProject.name = 'redis'
+include 'lettuce'
+include 'lettuce'
+include 'spring'
+include 'lock'
+include 'idemp'
+include 'reactor'
+include 'web'
+include 'redpacket'
+include 'message'
+
